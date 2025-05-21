@@ -31,6 +31,10 @@ _Optional_. Enables the display of errors or warnings by rules. Default is `true
 
 _Optional_. Fail when ESLint warnings are detected. Default is `false`
 
+### `fail-on-error` 
+
+_Optional_. Fail when ESLint errors are detected. Default is `true`
+
 ### `total-problems`
 
 _Optional_. Github has the limitation that you can only have 50 annotations and 65535 characters per request. This input tries to solve the problem, limiting the number of visible problems. Default is `100`
@@ -58,7 +62,7 @@ jobs:
       - run: npm ci
       - run: npm run lint:json
         continue-on-error: true
-      - uses: ldiego73/eslint-report-action@v1.1
+      - uses: ldiego73/eslint-report-action@v1.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           report: reports/lint.json

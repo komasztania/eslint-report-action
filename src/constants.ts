@@ -7,6 +7,7 @@ interface Inputs {
   title?: string;
   viewRules: boolean;
   failOnWarning: boolean;
+  failOnError: boolean;
   totalProblems: number;
 }
 
@@ -24,6 +25,7 @@ export const inputs: Inputs = {
   title: getInput('title'),
   viewRules: getBooleanInput('view-rules'),
   failOnWarning: getBooleanInput('fail-on-warning'),
+  failOnError: getBooleanInput('fail-on-error'),
   totalProblems: Number(getInput('total-problems')),
 };
 export const github: Github = {

@@ -105,7 +105,7 @@ export function createAnnotations(details: Details): Annotations {
 }
 
 export function getStatus(totals: Totals): Status {
-  if (totals.errors > 0 || (inputs.failOnWarning && totals.warnings > 0))
+  if ((totals.errors > 0 && inputs.failOnError) || (inputs.failOnWarning && totals.warnings > 0))
     return 'failure';
 
   return 'success';

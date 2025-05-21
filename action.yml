@@ -22,6 +22,10 @@ inputs:
     description: Fail when ESLint warnings are detected
     required: false
     default: 'false'
+  fail-on-error:
+    description: Fail when ESLint errors are detected
+    required: false
+    default: 'true'
   total-problems:
     description: Total problems displayed in the report
     required: false
